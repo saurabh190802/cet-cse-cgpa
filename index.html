@@ -19,7 +19,7 @@ footer {
 }
 </style>
   </head>
-  <body >
+  <body oncontextmenu="return false;">
     <center>
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
@@ -85,6 +85,20 @@ footer {
       crossorigin="anonymous"
     ></script>
     <script>
+      document.onkeydown = function(e) {
+if(event.keyCode == 123) {
+return false;
+}
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+return false;
+}
+if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+return false;
+}
+if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+return false;
+}
+}
         function Calc(){
             let credit=[20.5,20.5,23,20.5,22.5,20,20,13]
             let sgpa=["on","tw","th","fr","fi","si","se","ei"]
